@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,7 +33,7 @@
                     <i class="material-icons">pets</i>
                     <span class="sidebar-item-text">Serviços</span>
                 </a>
-                <a href="#" id="sidebar-item-logged" class="sidebar-item">
+                <a href="../html/adocao.html" id="sidebar-item-logged" class="sidebar-item">
                     <i class="material-icons">favorite</i>
                     <span class="sidebar-item-text">Adoção</span>
                 </a>
@@ -77,7 +79,7 @@
                 <header>
                     <nav class="navbar navbar-expand-lg bg-white p-3">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="../html/index.html"><img class="nav-logo" src="./assets/Logo.svg"
+                            <a class="navbar-brand" href="../../index.html"><img class="nav-logo" width="200px" src="../../imagens/logo.jpeg"
                                 alt="Logo da PetCare" /></a>
                                 <label id="welcome-message"></label>
                             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -119,64 +121,28 @@
                             <img src="./assets/para-voce.svg" alt="" />
                         </button>
                     </nav>
-                    <section class="mx-auto p-3">
-                        <div id="carouselExample" class="carousel slide">
-                            <div class="carousel-inner">
-                                <div class="carousel-item">
-                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
-                                        height="400" xmlns="http://www.w3.org/2000/svg" role="img"
-                                        aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice"
-                                        focusable="false">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#777"></rect>
-                                        <text x="50%" y="50%" fill="#555" dy=".3em">First slide</text>
-                                    </svg>
-                                </div>
-                                <div class="carousel-item">
-                                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800"
-                                        height="400" xmlns="http://www.w3.org/2000/svg" role="img"
-                                        aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice"
-                                        focusable="false">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#666"></rect>
-                                        <text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text>
-                                    </svg>
-                                </div>
-                                
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </section>
+
                     <section class="d-flex flex-column justify-content-center align-items-center gap-3">
-                        <h3>Informe o tipo de Pet que deseja adotar e o estado/cidade em que reside.</h3>
+                        <h3 class="pt-5">Informe o tipo de Pet que deseja adotar e o estado/cidade em que reside.</h3>
                         <br>
                         <form id="form_adocao" action="../html/agradecimentos.html">
-                            <label for="pet">Pet:</label><br>
-                            <label class="pet-label">
-                                <input type="radio" id="cachorro" name="pet" value="cachorro">
+                            <label for="form-check-label pet">Pet:</label><br>
+                            <label class="form-check-label pet-label">
+                                <input class="form-check-input" type="radio" id="cachorro" name="pet" value="cachorro">
                                 <img class="pet-option" src="../../imagens/adocao/cachorro-1.jpg" alt="Cachorro"> Cachorro
                             </label>
-                            <label class="pet-label">
-                                <input type="radio" id="gato" name="pet" value="gato">
+                            <label class="form-check-label pet-label">
+                                <input class="form-check-input" type="radio" id="gato" name="pet" value="gato">
                                 <img class="pet-option" src="../../imagens/adocao/gato-1.jpg" alt="Gato"> Gato
                             </label>
-                            <label class="pet-label">
-                                <input type="radio" id="passaro" name="pet" value="passaro">
+                            <label class="form-check-label pet-label">
+                                <input class="form-check-input" type="radio" id="passaro" name="pet" value="passaro">
                                 <img class="pet-option" src="../../imagens/adocao/passaro-1.jpg" alt="Pássaro"> Pássaro
                             </label>
                             <br><br>
 
                             <label for="estado">Estado:</label>
-                            <select id="estado" name="estado" onchange="atualizarCidades()">
+                            <select class="form-select" id="estado" name="estado" onchange="atualizarCidades()">
                                 <option value="AC">Acre</option>
                                         <option value="AL">Alagoas</option>
                                         <option value="AP">Amapá</option>
@@ -205,15 +171,15 @@
                                         <option value="SE">Sergipe</option>
                                         <option value="TO">Tocantins</option>
                             </select>
-                            <br><br>
+                            <br>
 
                             <label for="cidade">Cidade:</label>
-                            <select id="cidade" name="cidade">
+                            <select class="form-select" id="cidade" name="cidade">
                                 <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
                             </select>
-                            <br><br>
+                            <br>
 
-                            <button type="submit">Enviar</button>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
                         </form>
                     </section>
                     <section class="social-media my-3 py-3 d-flex flex-column gap-3 d-md-none">
@@ -729,4 +695,3 @@
 </body>
 
 </html>
-
