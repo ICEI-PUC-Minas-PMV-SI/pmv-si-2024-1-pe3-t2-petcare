@@ -1,0 +1,110 @@
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos para o corpo da página */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f1f1; /* Fundo claro para toda a página */
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    background-color: #ffe0b2;
+    height: 100vh; /* Altura total da tela */
+    padding: 20px;
+    width: 200px; /* Largura fixa para a sidebar */
+}
+
+/* Estilos para os itens da barra lateral */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Ícones no sidebar */
+.material-icons {
+    margin-right: 10px;
+}
+
+/* Conteúdo principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100%; /* Altura total do elemento */
+    padding: 20px;
+}
+
+/* Container para o formulário */
+.form-container {
+    width: 100%; /* Ocupa a largura total até o máximo definido */
+    max-width: 500px; /* Largura máxima para melhor visualização */
+    margin: auto; /* Centraliza dentro do espaço disponível */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Grupo de formulário para espaçamento entre campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilos para inputs, select e textarea */
+input, select, textarea {
+    width: 100%; /* Faz com que ocupem toda a largura do form-group */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Bordas discretas */
+}
+
+/* Botão de submissão */
+button {
+    width: 100%; /* Faz o botão ocupar toda a largura do form-group */
+    padding: 10px;
+    background-color: #d67b27; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    cursor: pointer;
+}
+
+/* Efeito hover para o botão */
+button:hover {
+    background-color: #91531a; /* Mudança de cor ao passar o mouse */
+}
+
+.container-fluid {
+    padding: 0; /* Remove padding para evitar deslocamentos desnecessários */
+}
+
+.row {
+    justify-content: center; /* Centraliza os elementos da linha horizontalmente */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centraliza os itens horizontalmente */
+    justify-content: center;  /* Centraliza os itens verticalmente */
+    height: 100vh; /* Define a altura para ocupar a tela inteira */
+    width: 100%; /* Garante que a .content ocupe todo o espaço disponível */
+    margin: 0 auto; /* Centraliza o .content no meio da página */
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px; /* Define a largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
