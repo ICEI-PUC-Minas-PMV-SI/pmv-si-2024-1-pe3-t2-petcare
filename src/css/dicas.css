@@ -107,7 +107,14 @@ li {
     clear: both;
     margin-left: 0;
     margin-right: 0;
-  }
+    padding-top: 60px; 
+    padding-bottom: 20px;
+}
+
+.midias {
+    cursor: pointer;
+    width: 30px; 
+}
 
 @media (max-width: 1000px) {
     .cards {
