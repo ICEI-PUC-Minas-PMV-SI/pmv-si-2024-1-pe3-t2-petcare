@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./src/assets/petcare_icon.svg" type="image/svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link href="./src/css/global-styles/menu_style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <title>PetCare :: Home</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Menu Desktop -->
+        <div class="col-2 sidebar">
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">storefront</i>
+            <span class="sidebar-item-text">Produtos</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">pets</i>
+            <span class="sidebar-item-text">Serviços</span>
+          </a>
+          <a
+            href="./src/html/adocao.html"
+            id="sidebar-item-logged"
+            class="sidebar-item"
+          >
+            <i class="material-icons">favorite</i>
+            <span class="sidebar-item-text">Adoção</span>
+          </a>
+          <a href="./src/html/dicas.html" class="sidebar-item">
+            <i class="material-icons">flag</i>
+            <span class="sidebar-item-text">Dicas</span>
+          </a>
+          <a href="#" class="sidebar-item">
+            <i class="material-icons">help</i>
+            <span class="sidebar-item-text">Fale Conosco</span>
+          </a>
+          <a
+            href="./src/html/login.html"
+            id="logout-desktop"
+            class="sidebar-item"
+          >
+            <i id="desktop-login-icon" class="material-icons">login</i>
+            <span class="sidebar-item-text" id="last-item-menu">Entrar</span>
+          </a>
+        </div>
+
+        <!-- Menu Tablet -->
+        <div class="col-2 tablet-sidebar">
+          <a href="#" class="tablet-sidebar-item" data-title="Produtos">
+            <i class="material-icons">storefront</i>
+          </a>
+          <a href="#" class="tablet-sidebar-item" data-title="Serviços">
+            <i class="material-icons">pets</i>
+          </a>
+          <a
+            href="../html/adocao.html"
+            id="sidebar-tab-item-logged"
+            class="tablet-sidebar-item"
+            data-title="Adoção"
+          >
+            <i class="material-icons">favorite</i>
+          </a>
+          <a
+            href="./src/html/dicas.html"
+            class="tablet-sidebar-item"
+            data-title="Dicas"
+          >
+            <i class="material-icons">flag</i>
+          </a>
+          <a
+            href="./src/html/suporte.html"
+            class="tablet-sidebar-item"
+            data-title="Fale Conosco"
+          >
+            <i class="material-icons">help</i>
+          </a>
+          <a
+            href="../html/login.html"
+            id="logout-tablet"
+            class="tablet-sidebar-item"
+            data-title="Login"
+          >
+            <i id="tablet-login-icon" class="material-icons">login</i>
+          </a>
+        </div>
+
+        <div class="col content">
+          <!-- A PARTIR DESTE PONTO -->
+          <!-- SEÇÃO PARA CONTEÚDO DE PAGINAS -->
+
+          <div>
+            <div class="petcare-header">
+              <a class="navbar-brand" href="./index.html">
+                <img
+                  class="nav-logo"
+                  src="./src/assets/logo_cabecalho.png"
+                  alt="Logo da PetCare"
+                />
+              </a>
+              <label id="welcome-message-user" class="regarding-user"
+                >Bem-vindo!</label
+              >
+            </div>
+          </div>
+
+          <main>
+            <nav class="d-flex flex-wrap gap-1 justify-content-center">
+              <button
+                class="btn-menu d-flex align-items-center justify-content-evenly border-0 rounded-2"
+              >
+                <h6>Cachorro</h6>
+                <img src="./src/assets/dog_mobile.svg" alt="" />
+              </button>
+              <button
+                class="btn-menu d-flex align-items-center justify-content-evenly border-0 rounded-2"
+              >
+                <h6>Gato</h6>
+                <img src="./src/assets/gato_mobile.svg" alt="" />
+              </button>
+              <button
+                class="btn-menu d-flex align-items-center justify-content-evenly border-0 rounded-2"
+              >
+                <h6>Dicas</h6>
+                <img src="./src/assets/Dicas.svg" alt="" />
+              </button>
+              <button
+                class="btn-menu d-flex align-items-center justify-content-evenly border-0 rounded-2"
+              >
+                <h6>Adoção</h6>
+                <img src="./src/assets/adocao.svg" alt="" />
+              </button>
+              <button
+                class="btn-menu d-flex align-items-center justify-content-evenly border-0 rounded-2"
+              >
+                <h6>Banho e Tosa</h6>
+                <img src="./src/assets/banho_e_tosa.svg" alt="" />
+              </button>
+              <button
+                class="btn-menu d-flex align-items-center justify-content-evenly border-0 rounded-2"
+              >
+                <h6 class="remomendacoes">Recomendações</h6>
+                <img src="./src/assets/para-voce.svg" alt="" />
+              </button>
+            </nav>
+            <section class="mx-auto p-3">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <svg
+                      class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+                      width="800"
+                      height="400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      aria-label="Placeholder: First slide"
+                      preserveAspectRatio="xMidYMid slice"
+                      focusable="false"
+                    >
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#777"></rect>
+                      <text x="50%" y="50%" fill="#555" dy=".3em">
+                        First slide
+                      </text>
+                    </svg>
+                  </div>
+                  <div class="carousel-item">
+                    <svg
+                      class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+                      width="800"
+                      height="400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      aria-label="Placeholder: Second slide"
+                      preserveAspectRatio="xMidYMid slice"
+                      focusable="false"
+                    >
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#666"></rect>
+                      <text x="50%" y="50%" fill="#444" dy=".3em">
+                        Second slide
+                      </text>
+                    </svg>
+                  </div>
+                  <div class="carousel-item active">
+                    <svg
+                      class="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+                      width="800"
+                      height="400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      aria-label="Placeholder: Third slide"
+                      preserveAspectRatio="xMidYMid slice"
+                      focusable="false"
+                    >
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#555"></rect>
+                      <text x="50%" y="50%" fill="#333" dy=".3em">
+                        Third slide
+                      </text>
+                    </svg>
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+            <section>
+              <h2 class="text-center py-2">Produtos Recomendados</h2>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="card mx-auto" style="width: 18rem">
+                  <svg
+                    class="bd-placeholder-img card-img-top"
+                    width="100%"
+                    height="180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Placeholder: Image cap"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
+                      Image cap
+                    </text>
+                  </svg>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="align-self-center">
+                      <a href="#" class="btn btn-card">Adicionar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem">
+                  <svg
+                    class="bd-placeholder-img card-img-top"
+                    width="100%"
+                    height="180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Placeholder: Image cap"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
+                      Image cap
+                    </text>
+                  </svg>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="align-self-center">
+                      <a href="#" class="btn btn-card">Adicionar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mx-auto" style="width: 18rem">
+                  <svg
+                    class="bd-placeholder-img card-img-top"
+                    width="100%"
+                    height="180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Placeholder: Image cap"
+                    preserveAspectRatio="xMidYMid slice"
+                    focusable="false"
+                  >
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
+                      Image cap
+                    </text>
+                  </svg>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <div class="align-self-center">
+                      <a href="#" class="btn btn-card">Adicionar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="mx-auto p-3">
+              <h2 class="text-center py-3">Categorias populares</h2>
+              <div
+                class="d-flex flex-row flex-wrap justify-content-center gap-3"
+              >
+                <div class="d-flex flex-column gap-2 align-items-center">
+                  <img
+                    class="img-categ-pop bg-body-secondary rounded-2"
+                    src="./src/assets/racao_dog 1.svg"
+                    alt=""
+                  />
+                  <p>Ração para cachorro</p>
+                </div>
+                <div class="d-flex flex-column gap-2 align-items-center">
+                  <img
+                    class="img-categ-pop bg-body-secondary rounded-2"
+                    src="./src/assets/racao_cat 1.svg"
+                    alt=""
+                  />
+                  <p>Ração para gato</p>
+                </div>
+                <div class="d-flex flex-column gap-2 align-items-center">
+                  <img
+                    class="img-categ-pop bg-body-secondary rounded-2"
+                    src="./src/assets/brinquedo 1.svg"
+                    alt=""
+                  />
+                  <p>Acessórios</p>
+                </div>
+                <div class="d-flex flex-column gap-2 align-items-center">
+                  <img
+                    class="img-categ-pop bg-body-secondary rounded-2"
+                    src="./src/assets/farmacia 1.svg"
+                    alt=""
+                  />
+                  <p>Farmácia</p>
+                </div>
+              </div>
+            </section>
+            <section class="p-2">
+              <h2 class="text-center pb-3">Vantagens em comprar na PetCare</h2>
+              <div
+                class="d-flex flex-wrap justify-content-center align-items-center gap-4"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center bg-body-secondary card-vantagens"
+                >
+                  <img src="./src/assets/frete.svg" alt="" />
+                  <p class="mb-0">Frete Grátis Brasil</p>
+                  <a class="text-black ver-regras" href="#">Ver regras</a>
+                </div>
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center bg-body-secondary card-vantagens"
+                >
+                  <img src="./src/assets/credi_card.svg" alt="" />
+                  <p class="mb-0">Até 10x Sem Juros</p>
+                  <a class="text-black ver-regras" href="#">Ver regras</a>
+                </div>
+              </div>
+            </section>
+
+            <div
+              class="novidades d-flex flex-column align-items-center my-3 p-3"
+            >
+              <p class="text-start">
+                Cadastra-se e receba novidades e promoções do mundo Pet
+              </p>
+              <form class="mb-2 form-novidades">
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Seu email"
+                  />
+                </div>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">Seu pet</option>
+                  <option value="1">Cachorro</option>
+                  <option value="2">Gato</option>
+                </select>
+              </form>
+              <span class="text-center mb-3"
+                >Ao se cadastrar você concorda com a nossa política de
+                privacidade
+              </span>
+              <button type="button" class="btn btn-form">Cadastrar</button>
+            </div>
+
+            <section
+              class="social-media my-3 py-3 d-flex flex-column gap-3 d-md-none"
+            >
+              <span class="text-start mx-3 fw-semibold">Redes Sociais</span>
+              <div
+                class="d-flex justify-content-evenly align-items-center gap-4"
+              >
+                <a href="#"
+                  ><img class="midias" src="./src/assets/facebook.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img class="midias" src="./src/assets/instagram.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img class="midias" src="./src/assets/linkedin.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img class="midias" src="./src/assets/youtube.svg" alt=""
+                /></a>
+              </div>
+            </section>
+          </main>
+
+          <footer class="footer p-3">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center gap-3"
+            >
+              <p class="fs-6 text-center">
+                Para valores diferentes, o preço final sempre será o da sacola
+                de compras
+              </p>
+              <span>2024 PetCare Comércio LTDA</span>
+              <span>Todos o direitos reservados</span>
+            </div>
+            <div class="d-sm-none d-none d-md-block">
+              <div class="d-flex align-items-center gap-4 pt-5">
+                <a href="#"
+                  ><img class="midias" src="./src/assets/facebook.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img class="midias" src="./src/assets/instagram.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img class="midias" src="./src/assets/linkedin.svg" alt=""
+                /></a>
+                <a href="#"
+                  ><img class="midias" src="./src/assets/youtube.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- FIM DO CONTEÚDO DA PAGINA (OBSERVAR RESPONSIVIDADE) -->
+
+    <!-- Menu Mobile -->
+    <div class="bottom-menu d-md-none">
+      <a href="#" class="bottom-menu-item" data-title="Produtos">
+        <i class="material-icons">storefront</i>
+      </a>
+      <a href="#" class="bottom-menu-item" data-title="Serviços">
+        <i class="material-icons">pets</i>
+      </a>
+      <a
+        href="../html/adocao.html"
+        id="sidebar-mob-item-logged"
+        class="bottom-menu-item"
+        data-title="Adoção"
+      >
+        <i class="material-icons">favorite</i>
+      </a>
+      <a
+        href="./src/html/dicas.html"
+        class="bottom-menu-item"
+        data-title="Dicas"
+      >
+        <i class="material-icons">flag</i>
+      </a>
+      <a
+        href="./src/html/suporte.html"
+        class="bottom-menu-item"
+        data-title="Fale Conosco"
+      >
+        <i class="material-icons">help</i>
+      </a>
+      <a
+        href="../html/login.html"
+        id="logout-mobile"
+        class="bottom-menu-item"
+        data-title="Entrar"
+      >
+        <i id="mobile-login-icon" class="material-icons">login</i>
+      </a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/js/interceptor.js"></script>
+    <script src="./src/js/login.js"></script>
+  </body>
+</html>
