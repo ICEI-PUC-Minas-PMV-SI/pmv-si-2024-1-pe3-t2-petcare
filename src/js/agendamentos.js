@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
             appointmentDate,
             additionalInfo
         };
-
         try {
 
             localStorage.setItem('appointmentData', JSON.stringify(appointmentData));
