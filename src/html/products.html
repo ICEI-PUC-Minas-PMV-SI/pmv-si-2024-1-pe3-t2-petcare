@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="../css/global-styles/menu_style.css" rel="stylesheet">
+    <link href="/src/css/products_style.css" rel="stylesheet">
+    <title>PetCare</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 sidebar">
+                <a href="#" class="sidebar-item active">
+                    <i class="material-icons">storefront</i>
+                    <span class="sidebar-item-text">Produtos</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="material-icons">pets</i>
+                    <span class="sidebar-item-text">Serviços</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="material-icons">favorite</i>
+                    <span class="sidebar-item-text">Adoção</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="material-icons">flag</i>
+                    <span class="sidebar-item-text">Dicas</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="material-icons">info</i>
+                    <span class="sidebar-item-text">Sobre Nós</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="material-icons">exit_to_app</i>
+                    <span class="sidebar-item-text">Login</span>
+                </a>
+            </div>
+
+            <div class="col-2 tablet-sidebar">
+                <a href="#" class="tablet-sidebar-item active" data-title="Produtos">
+                    <i class="material-icons">storefront</i>
+                </a>
+                <a href="#" class="tablet-sidebar-item" data-title="Serviços">
+                    <i class="material-icons">pets</i>
+                </a>
+                <a href="#" class="tablet-sidebar-item" data-title="Adoção">
+                    <i class="material-icons">favorite</i>
+                </a>
+                <a href="#" class="tablet-sidebar-item" data-title="Dicas">
+                    <i class="material-icons">flag</i>
+                </a>
+                <a href="#" class="tablet-sidebar-item" data-title="Sobre Nós">
+                    <i class="material-icons">info</i>
+                </a>
+                <a href="#" class="tablet-sidebar-item" data-title="Login">
+                    <i class="material-icons">exit_to_app</i>
+                </a>
+            </div>
+
+            <div class="col content">
+
+                <div class="container">
+                    <h1 class="mt-5 mb-4 text-center">PetCare Produtos</h1>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <h5 class="subtitle-filter">Buscar</h5>
+                                <input type="text" class="form-control" id="nameSearch"
+                                    placeholder="ração, coleira, brinquedo...">
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <h5 class="subtitle-filter">Preço</h5>
+                                <input type="range" class="form-range" min="25" max="300" step="25" id="priceRange">
+                                <div class="d-flex justify-content-between">
+                                    <span>R$ 25</span>
+                                    <span>R$ 300</span>
+                                </div>
+                                <div>
+                                    Filtrando até R$ <span id="priceValue">300,00</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <h5 class="subtitle-filter">Categorias</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="caes" id="cat1">
+                                    <label class="form-check-label" for="cat1">
+                                        Cães
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="gatos" id="cat2">
+                                    <label class="form-check-label" for="cat2">
+                                        Gatos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="aves" id="cat3">
+                                    <label class="form-check-label" for="cat3">
+                                        Aves
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="peixes" id="cat3">
+                                    <label class="form-check-label" for="cat3">
+                                        Peixes
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="mb-3">
+                                <h5 class="subtitle-filter">Oferta</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="oferta" id="onSale">
+                                    <label class="form-check-label" for="onSale">
+                                        Em Oferta
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 products-column">
+                            <div class="mb-3 span-results">
+                                <span id="resultsCount">Exibindo 0 resultados encontrados</span>
+                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-3 g-4" id="productDisplay">
+                                <div class="col product-visible" data-price="72" data-category="gatos">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Organnact_Cat_Probiótico_-_100_g_31016611.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Organnact Cat Probiótico</h2>
+                                        <p class="product-price">R$ 72,90</p>
+                                        <button class="btn-primary buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="295" data-category="aves">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Ração_Nutrópica_com_Frutas_para_Agapornis_31013120-2.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Ração Nutrópica</h2>
+                                        <p class="product-price">R$ 295,90</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="196" data-category="caes">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Ração_Premier_Pet_Ambientes_Internos_Cães_Filhotes_Frango_e_Salmão_-_12_Kg_3108262-3_1.webp"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Ração Premier Pet</h2>
+                                        <p class="product-price">R$ 196,80</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="130" data-category="caes">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Ração_Seca_Magnus_Todo_Dia_Carne_para_Cães_Adultos_311810.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Ração Seca Magnus</h2>
+                                        <p class="product-price">R$ 130,60</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="86" data-category="peixes">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/TetraColor-250ml-52g_2.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">TetraColor p/ peixes</h2>
+                                        <p class="product-price">R$ 86,90</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="59" data-category="gatos" data-sale="true">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Vermífugo_Drontal_Gatos_4_Kg_-_4_Comprimidos_0007_1.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Vermifugo Drontal</h2>
+                                        <p class="product-price">R$ 59,90</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="22" data-category="aves">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Ração_Zootekna_Realbird_Extrusada_Natural_para_Calopsita_-_300_g_2248924.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Ração Zootekna Realbird</h2>
+                                        <p class="product-price">R$ 22,70</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                                <div class="col product-visible" data-price="182" data-category="aves">
+                                    <div class="product-card">
+                                        <img src="src/assets/img_products/Bolsa_de_Transporte_Animalíssimo_Amarela_para_Calopsita_1859260_3.jpg"
+                                            alt="Placeholder Image" class="product-image">
+                                        <h2 class="product-name">Bolsa de Transporte</h2>
+                                        <p class="product-price">R$ 182,48</p>
+                                        <button class="buy-button">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-menu d-md-none">
+        <a href="#" class="bottom-menu-item active" data-title="Produtos">
+            <i class="material-icons">storefront</i>
+        </a>
+        <a href="#" class="bottom-menu-item" data-title="Serviços">
+            <i class="material-icons">pets</i>
+        </a>
+        <a href="#" class="bottom-menu-item" data-title="Adoção">
+            <i class="material-icons">favorite</i>
+        </a>
+        <a href="#" class="bottom-menu-item" data-title="Dicas">
+            <i class="material-icons">flag</i>
+        </a>
+        <a href="#" class="bottom-menu-item" data-title="Sobre Nós">
+            <i class="material-icons">info</i>
+        </a>
+        <a href="#" class="bottom-menu-item" data-title="Login">
+            <i class="material-icons">exit_to_app</i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-2ge9OBNLSmH3q5SvaOc6cp0r0iHRChV7aIbXLvZ6PA9UCl5LIUpnHos2vbW5Q8t4" crossorigin="anonymous" />
+    </script>
+
+    <script src="../js/products.js"></script>
+</body>
+
+</html>
