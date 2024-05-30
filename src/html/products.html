@@ -77,55 +77,52 @@
                             <div class="mb-3">
                                 <h5 class="subtitle-filter">Buscar</h5>
                                 <input type="text" class="form-control" id="nameSearch"
-                                    placeholder="ração, coleira, brinquedo...">
+                                    placeholder="Qual produto você precisa hoje?">
                             </div>
                             <hr>
                             <div class="mb-3">
                                 <h5 class="subtitle-filter">Preço</h5>
-                                <input type="range" class="form-range" min="25" max="300" step="25" id="priceRange">
+                                <input type="range" class="form-range" min="40" max="800" step="20" id="priceRange"
+                                    value="800">
                                 <div class="d-flex justify-content-between">
-                                    <span>R$ 25</span>
-                                    <span>R$ 300</span>
+                                    <span>R$ 40</span>
+                                    <span>R$ 800</span>
                                 </div>
                                 <div>
-                                    Filtrando até R$ <span id="priceValue">300,00</span>
+                                    Filtrando até R$ <span id="priceValue">800</span>
                                 </div>
                             </div>
                             <hr>
                             <div class="mb-3">
                                 <h5 class="subtitle-filter">Categorias</h5>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="caes" id="cat1">
+                                    <input class="form-check-input" type="checkbox" value="cachorro" id="cat1">
                                     <label class="form-check-label" for="cat1">
-                                        Cães
+                                        Cachorro
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="gatos" id="cat2">
+                                    <input class="form-check-input" type="checkbox" value="gato" id="cat2">
                                     <label class="form-check-label" for="cat2">
-                                        Gatos
+                                        Gato
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="aves" id="cat3">
+                                    <input class="form-check-input" type="checkbox" value="ave" id="cat3">
                                     <label class="form-check-label" for="cat3">
-                                        Aves
+                                        Ave
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="peixes" id="cat3">
+                                    <input class="form-check-input" type="checkbox" value="peixe" id="cat3">
                                     <label class="form-check-label" for="cat3">
-                                        Peixes
+                                        Peixe
                                     </label>
                                 </div>
-                            </div>
-                            <hr>
-                            <div class="mb-3">
-                                <h5 class="subtitle-filter">Oferta</h5>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="oferta" id="onSale">
-                                    <label class="form-check-label" for="onSale">
-                                        Em Oferta
+                                    <input class="form-check-input" type="checkbox" value="reptil" id="cat3">
+                                    <label class="form-check-label" for="cat3">
+                                        Réptil
                                     </label>
                                 </div>
                             </div>
@@ -133,82 +130,22 @@
 
                         <div class="col-md-9 products-column">
                             <div class="mb-3 span-results">
-                                <span id="resultsCount">Exibindo 0 resultados encontrados</span>
+                                <span id="resultsCount"></span>
                             </div>
 
                             <div class="row row-cols-1 row-cols-md-3 g-4" id="productDisplay">
-                                <div class="col product-visible" data-price="72" data-category="gatos">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Organnact_Cat_Probiótico_-_100_g_31016611.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Organnact Cat Probiótico</h2>
-                                        <p class="product-price">R$ 72,90</p>
-                                        <button class="btn-primary buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="295" data-category="aves">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Ração_Nutrópica_com_Frutas_para_Agapornis_31013120-2.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Ração Nutrópica</h2>
-                                        <p class="product-price">R$ 295,90</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="196" data-category="caes">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Ração_Premier_Pet_Ambientes_Internos_Cães_Filhotes_Frango_e_Salmão_-_12_Kg_3108262-3_1.webp"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Ração Premier Pet</h2>
-                                        <p class="product-price">R$ 196,80</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="130" data-category="caes">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Ração_Seca_Magnus_Todo_Dia_Carne_para_Cães_Adultos_311810.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Ração Seca Magnus</h2>
-                                        <p class="product-price">R$ 130,60</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="86" data-category="peixes">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/TetraColor-250ml-52g_2.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">TetraColor p/ peixes</h2>
-                                        <p class="product-price">R$ 86,90</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="59" data-category="gatos" data-sale="true">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Vermífugo_Drontal_Gatos_4_Kg_-_4_Comprimidos_0007_1.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Vermifugo Drontal</h2>
-                                        <p class="product-price">R$ 59,90</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="22" data-category="aves">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Ração_Zootekna_Realbird_Extrusada_Natural_para_Calopsita_-_300_g_2248924.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Ração Zootekna Realbird</h2>
-                                        <p class="product-price">R$ 22,70</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
-                                <div class="col product-visible" data-price="182" data-category="aves">
-                                    <div class="product-card">
-                                        <img src="src/assets/img_products/Bolsa_de_Transporte_Animalíssimo_Amarela_para_Calopsita_1859260_3.jpg"
-                                            alt="Placeholder Image" class="product-image">
-                                        <h2 class="product-name">Bolsa de Transporte</h2>
-                                        <p class="product-price">R$ 182,48</p>
-                                        <button class="buy-button">Comprar</button>
-                                    </div>
-                                </div>
+                                <!-- Produtos serão exibidos buscando no mockserver aqui -->
+                            </div>
+
+                            <div id="loadingMessage" class="div-loading justify-content-center my-5">
+                                <div class="spinner-border" role="status"></div>
+                                <label class="loading-text">Buscando os melhores produtos para o seu pet ;)
+                                </label>
+                            </div>
+
+                            <div id="errorMessage" class="error-message justify-content-center my-5">
+                                <i class="material-icons error-icon">error</i>
+                                <label class="error-text"></label>
                             </div>
                         </div>
                     </div>
@@ -242,8 +179,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-2ge9OBNLSmH3q5SvaOc6cp0r0iHRChV7aIbXLvZ6PA9UCl5LIUpnHos2vbW5Q8t4" crossorigin="anonymous" />
     </script>
-
     <script src="../js/products.js"></script>
+    <script src="../js/fetch_api_products.js"></script>
 </body>
 
 </html>
