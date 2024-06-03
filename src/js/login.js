@@ -128,7 +128,7 @@ function entrar() {
     const usuarioSenha = localStorage.getItem('usuarioSenha');
 
     if (emailLogin === usuarioEmail && senhaLogin === usuarioSenha) {
-        window.location.href = 'index.html';
+        window.location.href = '';
     } else {
         alert('Email ou senha incorretos!');
     }

@@ -138,6 +138,12 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     border-radius: 8px;
 }
 
+.product-image-detail {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
 .product-name {
     color: var(--petcare-color-dark-gray);
     font-size: 18px;
@@ -145,10 +151,23 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     margin-top: 10px;
 }
 
+.product-name-detail {
+    margin-top: 0;
+}
+
 .product-price {
     font-weight: bold;
     font-size: 24px;
     color: var(--petcare-color-dark-orange);
+}
+
+.back-button {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.btn {
+    margin-bottom: 8px;
 }
 
 .buy-button {
@@ -187,6 +206,13 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 btn:active, .buy-button:active {
     background-color: var(--petcare-color-dark-brown);
     border-color: var(--petcare-color-dark-brown);
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
 }
 
 .product-hidden {

@@ -14,7 +14,7 @@
     <link href="../css/global-styles/menu_style.css" rel="stylesheet">
     <link rel="icon" href="../assets/petcare_icon.svg" type="image/svg">
     <link href="/src/css/products_style.css" rel="stylesheet">
-    <title>Produtos | PetCare</title>
+    <title id="page-title">teste</title>
 </head>
 
 <body>
@@ -88,86 +88,26 @@
                 </div>
 
                 <div class="container">
-                    <h1 class="mt-5 mb-4 text-center">PetCare Produtos</h1>
+                    <h1 class="mt-5 mb-4 text-center">Detalhes do Produto</h1>
                     <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <h5 class="subtitle-filter">Buscar</h5>
-                                <input type="text" class="form-control" id="nameSearch"
-                                    placeholder="Qual produto você precisa hoje?">
-                            </div>
-                            <hr>
-                            <div class="mb-3">
-                                <h5 class="subtitle-filter">Preço</h5>
-                                <input type="range" class="form-range" min="40" max="800" step="20" id="priceRange"
-                                    value="800">
-                                <div class="d-flex justify-content-between">
-                                    <span>R$ 40</span>
-                                    <span>R$ 800</span>
-                                </div>
-                                <div>
-                                    Filtrando até R$ <span id="priceValue">800</span>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="mb-3">
-                                <h5 class="subtitle-filter">Categorias</h5>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="cachorro" id="cat1">
-                                    <label class="form-check-label" for="cat1">
-                                        Cachorro
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="gato" id="cat2">
-                                    <label class="form-check-label" for="cat2">
-                                        Gato
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="ave" id="cat3">
-                                    <label class="form-check-label" for="cat3">
-                                        Ave
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="peixe" id="cat3">
-                                    <label class="form-check-label" for="cat3">
-                                        Peixe
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="reptil" id="cat3">
-                                    <label class="form-check-label" for="cat3">
-                                        Réptil
-                                    </label>
-                                </div>
-                            </div>
+
+                        <div class="col-md-6">
+                            <img src="https://via.placeholder.com/400" alt="Imagem do produto"
+                                class="img-fluid product-image-detail">
                         </div>
-
-                        <div class="col-md-9 products-column">
-                            <div class="mb-3 span-results">
-                                <span id="resultsCount"></span>
+                        <div class="col-md-6 product-details">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a href="../html/products.html" class="btn btn-dark back-button" >
+                                    <i class="bi bi-arrow-left"></i> Voltar
+                                </a>
                             </div>
-
-                            <div class="row row-cols-1 row-cols-md-3 g-4" id="productDisplay">
-                                <!-- Produtos serão exibidos buscando no mockserver aqui -->
-                            </div>
-
-                            <div id="loadingMessage" class="div-loading justify-content-center my-5">
-                                <div class="spinner-border" role="status"></div>
-                                <label class="loading-text">Buscando os melhores produtos para o seu pet ;)
-                                </label>
-                            </div>
-
-                            <div id="errorMessage" class="error-message justify-content-center my-5">
-                                <i class="material-icons error-icon">error</i>
-                                <label class="error-text"></label>
-                            </div>
+                            <h2 class="product-name-detail">Produto (Falha no carregamento)</h2>
+                            <p class="product-price">Preço: R$ (Falha no carregamento)</p>
+                            <button id="buy-btn" class="btn btn-primary buy-button">Comprar</button>
+                            <button id="add-cart-btn" class="btn btn-outline-warning">Adicionar ao Carrinho</button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -194,11 +134,13 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-2ge9OBNLSmH3q5SvaOc6cp0r0iHRChV7aIbXLvZ6PA9UCl5LIUpnHos2vbW5Q8t4" crossorigin="anonymous" />
-    </script>
+        integrity="sha384-2ge9OBNLSmH3q5SvaOc6cp0r0iHRChV7aIbXLvZ6PA9UCl5LIUpnHos2vbW5Q8t4"
+        crossorigin="anonymous"></script>
+
     <script src="../js/interceptor.js"></script>
-    <script src="../js/product-filters.js"></script>
+    <script src="../js/product-details.js"></script>
     <script src="../js/fetch-api.js"></script>
+
 </body>
 
 </html>

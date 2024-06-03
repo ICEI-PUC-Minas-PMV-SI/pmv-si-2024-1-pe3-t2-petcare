@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const button = document.createElement('button');
             button.className = 'buy-button';
             button.textContent = 'Comprar';
+            card.addEventListener('click', () => loadProductDetails(item.id));  // Adiciona o event listener
 
             imgContainer.appendChild(img);
             card.appendChild(imgContainer);
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const errorMessageDiv = document.getElementById('errorMessage');
         errorMessageDiv.style.display = 'block';
         const errorText = document.querySelector('.error-text');
-        errorText.textContent = 'Desculpe tivemos um problema, por favor tente recarregar a página :(';
+        errorText.textContent = 'Desculpe tivemos um problema, por favor tente novamente mais tarde :(';
         console.error('Erro:', errorMessage);
     }
 
@@ -85,7 +86,33 @@ document.addEventListener('DOMContentLoaded', () => {
             fetchData();
             loadingMessageDiv.style.display = 'none';
             productDisplayDiv.style.display = 'flex';
-        }, 2000);
+        }, 1000);
+    }
+
+    function loadProductDetails(productId) {
+        window.location.href = `product.html?productId=${productId}`;
+    }
+
+    function displayProductDetails(product) {
+        const productDetailsDiv = document.getElementById('productDetails');
+        productDetailsDiv.innerHTML = '';
+
+        const title = document.createElement('h2');
+        title.textContent = product.name;
+
+        const img = document.createElement('img');
+        img.src = product.imageUrl;
+        img.alt = product.name;
+        img.className = 'product-image';
+
+        const price = document.createElement('p');
+        price.textContent = `R$ ${product.price.toFixed(2)}`;
+
+        productDetailsDiv.appendChild(title);
+        productDetailsDiv.appendChild(img);
+        productDetailsDiv.appendChild(price);
+
+        productDetailsDiv.style.display = 'block';
     }
 
     loadProductsWithDelay();
