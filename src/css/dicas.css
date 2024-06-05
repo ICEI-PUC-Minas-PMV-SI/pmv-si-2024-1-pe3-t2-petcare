@@ -1,24 +1,5 @@
 @import url('../css/global-styles/petcare_colors_style.css');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding-bottom: 0; 
-}
-
-#logo {
-    width: 200px;
-}
-
 h1 {
     text-align: center;
     padding-top: 60px;
@@ -48,7 +29,7 @@ h2 {
     flex: 1;
 }
 
-.container {
+.container-dicas {
     display: flex;
     justify-content: center;
     flex-grow: 1;
@@ -95,25 +76,6 @@ li {
     margin-bottom: 8px;
     text-align: justify;
     padding-top: 5px;
-}
-
-.footer {
-    background-color: var(--petcare-color-dark-orange);
-    color: var(--petcare-color-white);
-    width: 100%;
-    position: relative;
-    margin-top: 60px;
-    text-align: center;
-    clear: both;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 60px; 
-    padding-bottom: 20px;
-}
-
-.midias {
-    cursor: pointer;
-    width: 30px; 
 }
 
 @media (max-width: 1000px) {
