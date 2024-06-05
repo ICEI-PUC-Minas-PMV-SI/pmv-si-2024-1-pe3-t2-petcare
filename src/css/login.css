@@ -41,6 +41,7 @@ h3 {
    background-color: var(--petcare-color-white);
    box-shadow: 0 0 20px 0 var(--petcare-color-gray-light);
    padding-bottom: 60px;
+   margin-bottom: 30px;
 }
 
 form {
