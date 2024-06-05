@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const productDetailsDiv = document.querySelector('.product-details');
     const productImage = document.querySelector('.product-image-detail');
 
-    if (!productId) {
-        productDetailsDiv.innerHTML = '<p>ID do produto não fornecido.</p>';
-        return;
-    }
-
     const productDetailsUrl = `http://localhost:8087/petcare/${productId}`;
 
     try {
