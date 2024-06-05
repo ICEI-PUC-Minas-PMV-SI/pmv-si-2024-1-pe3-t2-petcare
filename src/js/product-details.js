@@ -48,6 +48,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         errorText.textContent = 'Desculpe tivemos um problema, por favor tente novamente mais tarde :(';
         console.error('Erro:', errorMessage);
     }
+
+    let animationSpeed = 600;
+    let currentPosition = 0;
+    function animateTitle() {
+        let titleText = document.getElementById('page-title').textContent;
+        document.title = titleText.substring(currentPosition) + titleText.substring(0, currentPosition);
+        currentPosition = (currentPosition + 1) % titleText.length;
+        setTimeout(animateTitle, animationSpeed);
+    }
+
+    animateTitle();
 });
 
 document.querySelector('.back-button').addEventListener('click', function () {
