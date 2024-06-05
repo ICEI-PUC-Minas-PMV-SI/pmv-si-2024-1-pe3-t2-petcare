@@ -97,7 +97,7 @@ confirmSenha.addEventListener('keyup', () => {
 })
 
 function navegar() {
-    window.location.href = 'index.html';
+    window.location.href = '../../index.html';
 }
 
 function cadastrar() {
@@ -111,23 +111,35 @@ function cadastrar() {
         return;
     }
 
-    localStorage.setItem('usuarioNome', nome);
-    localStorage.setItem('usuarioEmail', email);
-    localStorage.setItem('usuarioSenha', senha);
+    const novoUsuario = {
+        nome: nome,
+        email: email,
+        senha: senha,
+        logged: false
+    };
+
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    usuarios.push(novoUsuario);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
     alert('Cadastro realizado com sucesso!');
     window.location.href = 'login.html';
 }
 
+
 function entrar() {
     const emailLogin = document.getElementById('emailLogin').value;
     const senhaLogin = document.getElementById('senhaLogin').value;
+    
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuario = usuarios.find(user => user.email === emailLogin && user.senha === senhaLogin);
 
-    const usuarioEmail = localStorage.getItem('usuarioEmail');
-    const usuarioSenha = localStorage.getItem('usuarioSenha');
-
-    if (emailLogin === usuarioEmail && senhaLogin === usuarioSenha) {
-        window.location.href = '';
+    if (usuario) {
+        usuario.logged = true;
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        localStorage.setItem('logged', true);
+        window.location.href = '../../index.html';
     } else {
         alert('Email ou senha incorretos!');
     }
 }
+

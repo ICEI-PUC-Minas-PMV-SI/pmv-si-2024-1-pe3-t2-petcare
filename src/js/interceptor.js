@@ -1,13 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const usuarioNome = localStorage.getItem('usuarioNome');
 
-    modifyMenuIfUserLogged(usuarioNome);
+    const isLogged = isLoggedCurrentUser();
+
+    modifyMenuIfUserLogged(isLogged);
     refreshAllMenu();
 });
 
-function modifyMenuIfUserLogged(usuarioNome) {
-    if (usuarioNome) {
-        document.getElementById('welcome-message-user').textContent = `Olá ${usuarioNome}!`;
+function isLoggedCurrentUser() {
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioLogado = usuarios.find(user => user.logged === true);
+    return usuarioLogado ? usuarioLogado : false;
+}
+
+function modifyMenuIfUserLogged(usuarioLogado) {
+    if (usuarioLogado) {
+        const userName = usuarioLogado.nome;
+        document.getElementById('welcome-message-user').textContent = `Olá ${userName}!`;
         document.getElementById('desktop-login-icon').textContent = `logout`;
         document.getElementById('tablet-login-icon').textContent = `logout`;
         document.getElementById('mobile-login-icon').textContent = `logout`;
@@ -30,21 +38,26 @@ function modifyMenuIfUserLogged(usuarioNome) {
 
 function refreshAllMenu() {
     document.getElementById('logout-desktop').addEventListener('click', function () {
-        clearLocalStorage();
+        unlogUser();
     });
 
     document.getElementById('logout-tablet').addEventListener('click', function () {
-        clearLocalStorage();
+        unlogUser();
     });
 
     document.getElementById('logout-mobile').addEventListener('click', function () {
-        clearLocalStorage();
+        unlogUser();
     });
 }
 
-function clearLocalStorage() {
-    localStorage.removeItem('usuarioNome');
-    localStorage.removeItem('usuarioEmail');
-    localStorage.removeItem('usuarioSenha');
+function unlogUser() {
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    usuarios.forEach(user => {
+        if (user.logged) {
+            user.logged = false;
+        }
+    });
+
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
     window.location.href = 'login.html';
 }

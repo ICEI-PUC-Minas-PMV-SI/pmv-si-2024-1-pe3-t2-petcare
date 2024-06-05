@@ -64,6 +64,10 @@ body {
   display: inline-block !important;
 }
 
+.icon-logged-user {
+  color: var(--petcare-color-purple-logged);
+}
+
 .sidebar-item {
   width: 100%;
   padding: 28px;
@@ -152,6 +156,10 @@ body {
     color: var(--petcare-color-orange);
   }
 
+  .icon-logged-user {
+    color: var(--petcare-color-purple-logged);
+  }
+
   .tablet-sidebar-item:last-child {
     margin-top: auto;
   }
@@ -163,6 +171,11 @@ body {
 
   .tablet-sidebar-item.active {
     color: var(--petcare-color-dark-gray);
+    background-color: var(--petcare-color-yellow);
+  }
+
+  .icon-logged-user.active {
+    color: var(--petcare-color-purple-logged);
     background-color: var(--petcare-color-yellow);
   }
 
@@ -208,6 +221,10 @@ body {
     color: var(--petcare-color-orange);
   }
 
+  .icon-logged-user {
+    color: var(--petcare-color-purple-logged);
+  }
+
   .bottom-menu-item:active {
     color: var(--petcare-color-white);
     background-color: var(--petcare-color-dark-orange);
@@ -215,6 +232,11 @@ body {
 
   .bottom-menu-item.active {
     color: var(--petcare-color-dark-gray);
+    background-color: var(--petcare-color-yellow);
+  }
+
+  .icon-logged-user.active {
+    color: var(--petcare-color-purple-logged);
     background-color: var(--petcare-color-yellow);
   }
 

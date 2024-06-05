@@ -42,11 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function displayError(errorMessage) {
-        const errorMessageDiv = document.getElementById('errorMessage');
-        errorMessageDiv.style.display = 'block';
-        const errorText = document.querySelector('.error-text');
-        errorText.textContent = 'Desculpe tivemos um problema, por favor tente novamente mais tarde :(';
-        console.error('Erro:', errorMessage);
+        window.location.href = './products.html';
     }
 
     let animationSpeed = 600;
