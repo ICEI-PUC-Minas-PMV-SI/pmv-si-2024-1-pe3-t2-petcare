@@ -8,6 +8,14 @@
   --petcare-shadow-1: 0 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+footer {
+  font-family: 'Ubuntu Sans', sans-serif;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar o footer */
+}
+
 body {
   font-family: 'Ubuntu Sans', sans-serif;
 }
@@ -107,6 +115,11 @@ body {
 /******************/
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    position: fixed;
+    margin-bottom: 0px;
+  }  
+
   .sidebar {
     display: none;
   }
@@ -208,7 +221,14 @@ body {
   .content {
     margin-left: 0;
   }
+
+  footer {
+    position: static;
+    top: 20px;
+    margin-bottom: 48px;
+  }
 }
+
 #logo {
   width: 200px;
 }

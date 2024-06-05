@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('page-title').textContent = product.name;
 
         const productPrice = productDetailsDiv.querySelector('.product-price');
-        productPrice.textContent = `Preço: R$ ${product.price.toFixed(2)}`;
+        productPrice.textContent = `R$ ${product.price.toFixed(2)}`;
     }
 
     function displayError(errorMessage) {

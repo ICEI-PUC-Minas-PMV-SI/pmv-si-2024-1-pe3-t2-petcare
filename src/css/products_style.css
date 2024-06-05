@@ -63,17 +63,17 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     width: 400px;
     padding: 20px;
     background-color: var(--petcare-color-full-white);
-    box-shadow: 0 0 5px #d44b4b;
+    box-shadow: 0 0 5px var(--petcare-color-warning-red);
     border-radius: 8px;
     display: none;
 }
 
 .error-icon {
-    color: #d44b4b;
+    color: var(--petcare-color-warning-red);
 }
 
 .error-text {
-    color: #d44b4b;
+    color: var(--petcare-color-warning-red);
 }
 
 .div-loading {
