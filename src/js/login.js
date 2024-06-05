@@ -21,7 +21,6 @@ let validConfirmSenha = false
 
 // muda para login
 document.querySelector('#btnSignin').addEventListener('click', () => {
-    console.log("Clicou em login"); // Verificação
     formSignin.style.left = "25px";
     formSignup.style.left = "450px";
     btnColor.style.left = "0px";
@@ -29,7 +28,6 @@ document.querySelector('#btnSignin').addEventListener('click', () => {
 
 // muda para cadastro
 document.querySelector('#btnSignup').addEventListener('click', () => {
-    console.log("Clicou em cadastro"); // Verificação
     formSignin.style.left = "-450px";
     formSignup.style.left = "25px";
     btnColor.style.left = "110px";

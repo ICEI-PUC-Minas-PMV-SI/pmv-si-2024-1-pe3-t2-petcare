@@ -1,3 +1,21 @@
+
+.divider {
+   width: 100%;
+   text-align: center;
+   border-top: 1px solid var(--petcare-color-gray-light);
+   position: relative;
+   margin: 20px 0;
+}
+
+.divider-text {
+   position: absolute;
+   top: -10px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: var(--petcare-color-white);
+   padding: 0 10px;
+}
+
 .titulo {
    text-align: center;
    margin-bottom: 20px;
@@ -34,11 +52,15 @@ form {
    margin-top: 30px;
 }
 
+#btnSignin, #btnSignup {
+   font-weight: bold;
+}
+
 .buttonsForm {
    margin-top: 40px;
    position: relative;
    border-radius: 30px;
-   box-shadow: 0 0 7px 0 #d67b27;
+   box-shadow: 0 0 7px 0 var(--petcare-color-orange);
 }
 
 .buttonsForm button {
@@ -51,9 +73,9 @@ form {
 
 .btnColor {
    position: absolute;
-   width: 130px;
+   width: 120px;
    height: 100%;
-   background: linear-gradient(to right, #f29f05, #f29f05);
+   background: linear-gradient(to right, var(--petcare-color-yellow), var(--petcare-color-orange));
    border-radius: 30px;
    transition: .3s;
 }
@@ -69,16 +91,19 @@ input[type="password"] {
    font-size: 12px;
 }
 
+#senhaLogin, #confirmSenha {
+   margin-bottom: 30px;
+}
+
 button[type="submit"] {
-   background: #f29f05;
-   color: #000;
+   background: var(--petcare-color-orange);
+   color: var(--petcare-color-gray);
    border-radius: 5px;
    width: 100%;
    border: none;
    outline: none;
    padding: 8px 0 8px 10px;
    font-size: 15px;
-   margin-top: 30px;
    cursor: pointer;
 }
 
@@ -99,6 +124,5 @@ h3 {
 label {
    font-size: 10px;
    font-family: 'Ubuntu Sans', sans-serif;
-   margin: 10px 0 0 0;
 }
 
