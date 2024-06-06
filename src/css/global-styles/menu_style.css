@@ -21,7 +21,7 @@ body {
 }
 
 .petcare-header {
-  padding: 12px;
+  padding: 12px 0 12px 0;
   width: 100%;
   background-color: var(--petcare-color-full-white);
 }
