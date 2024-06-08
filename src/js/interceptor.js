@@ -14,7 +14,7 @@ function isLoggedCurrentUser() {
 
 function modifyMenuIfUserLogged(usuarioLogado) {
     if (usuarioLogado) {
-        const userName = usuarioLogado.nome;
+        const userName = getFirstUserName(usuarioLogado.nome);
         document.getElementById('welcome-message-user').textContent = `Olá ${userName}!`;
         document.getElementById('desktop-login-icon').textContent = `logout`;
         document.getElementById('tablet-login-icon').textContent = `logout`;
@@ -48,6 +48,11 @@ function refreshAllMenu() {
     document.getElementById('logout-mobile').addEventListener('click', function () {
         unlogUser();
     });
+}
+
+function getFirstUserName(fullName) {
+    const nameParts = fullName.split(' ');
+    return nameParts[0];
 }
 
 function unlogUser() {
