@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://localhost:8087/petcare/produtos';
-
     async function fetchData() {
         try {
-            const response = await fetch(apiUrl);
+            const response = await fetch('../js/products.json');
             if (!response.ok) {
                 throw new Error('Erro ao buscar dados da API');
             }
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const button = document.createElement('button');
             button.className = 'buy-button';
             button.textContent = 'Comprar';
-            card.addEventListener('click', () => loadProductDetails(item.id));  // Adiciona o event listener
+            card.addEventListener('click', () => loadProductDetails(item));
 
             imgContainer.appendChild(img);
             card.appendChild(imgContainer);
@@ -89,30 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    function loadProductDetails(productId) {
-        window.location.href = `product.html?productId=${productId}`;
-    }
-
-    function displayProductDetails(product) {
-        const productDetailsDiv = document.getElementById('productDetails');
-        productDetailsDiv.innerHTML = '';
-
-        const title = document.createElement('h2');
-        title.textContent = product.name;
-
-        const img = document.createElement('img');
-        img.src = product.imageUrl;
-        img.alt = product.name;
-        img.className = 'product-image';
-
-        const price = document.createElement('p');
-        price.textContent = `R$ ${product.price.toFixed(2)}`;
-
-        productDetailsDiv.appendChild(title);
-        productDetailsDiv.appendChild(img);
-        productDetailsDiv.appendChild(price);
-
-        productDetailsDiv.style.display = 'block';
+    function loadProductDetails(item) {
+        const productDetails = encodeURIComponent(JSON.stringify(item));
+        window.location.href = `product.html?productDetails=${productDetails}`;
     }
 
     loadProductsWithDelay();

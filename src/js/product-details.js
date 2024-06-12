@@ -1,44 +1,28 @@
-
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('productId');
-    const productDetailsDiv = document.querySelector('.product-details');
-    const productImage = document.querySelector('.product-image-detail');
-
-    const productDetailsUrl = `http://localhost:8087/petcare/${productId}`;
+    const productDetailsParam = urlParams.get('productDetails');
 
     try {
-        const response = await fetch(productDetailsUrl);
-        if (!response.ok) {
-            throw new Error('Erro ao buscar detalhes do produto');
+        if (!productDetailsParam) {
+            throw new Error('Detalhes do produto não encontrados na URL');
         }
-        const product = await response.json();
+        const product = JSON.parse(decodeURIComponent(productDetailsParam));
         displayProductDetails(product);
     } catch (error) {
-        const buyButton = document.getElementById('buy-btn');
-            buyButton.addEventListener('click', function() {
-                this.classList.add('btn-outline-secondary')});
-            buyButton.setAttribute('disabled', 'true');
-            
-        const addCartButton = document.getElementById('add-cart-btn');
-        addCartButton.addEventListener('click', function() {
-                this.classList.add('btn-outline-secondary')});
-                addCartButton.setAttribute('disabled', 'true');    
-
         displayError(error.message);
     }
 
     function displayProductDetails(product) {
+        const productImage = document.querySelector('.product-image-detail');
         productImage.src = product.imageUrl;
         productImage.alt = product.name;
 
-        const productName = productDetailsDiv.querySelector('.product-name-detail');
+        const productName = document.querySelector('.product-name-detail');
         productName.textContent = product.name;
 
-        document.getElementById('page-title').textContent = product.name;
-
-        const productPrice = productDetailsDiv.querySelector('.product-price');
+        const productPrice = document.querySelector('.product-price');
         productPrice.textContent = `R$ ${product.price.toFixed(2)}`;
+        document.title = product.name;
     }
 
     function displayError(errorMessage) {
@@ -48,15 +32,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     let animationSpeed = 600;
     let currentPosition = 0;
     function animateTitle() {
-        let titleText = document.getElementById('page-title').textContent;
+        let titleText = document.title;
         document.title = titleText.substring(currentPosition) + titleText.substring(0, currentPosition);
         currentPosition = (currentPosition + 1) % titleText.length;
         setTimeout(animateTitle, animationSpeed);
     }
 
     animateTitle();
-});
 
-document.querySelector('.back-button').addEventListener('click', function () {
-    window.history.back();
+    document.querySelector('.back-button').addEventListener('click', () => {
+        window.history.back();
+    });
 });
