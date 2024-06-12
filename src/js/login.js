@@ -106,7 +106,7 @@ function cadastrar() {
     const senha = document.getElementById('cadSenha').value;
     const confirmSenha = document.getElementById('confirmSenha').value;
 
-    if (!nome || !email || !senha || !confirmSenha) {
+    if (!nome.trim() || !email.trim() || !senha.trim() || !confirmSenha.trim()) {
         alert('Preencha todos os dados!');
         return;
     }
@@ -134,14 +134,13 @@ function cadastrar() {
 function entrar() {
     const emailLogin = document.getElementById('emailLogin').value;
     const senhaLogin = document.getElementById('senhaLogin').value;
-    
+
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
     const usuario = usuarios.find(user => user.email === emailLogin && user.senha === senhaLogin);
 
     if (usuario) {
         usuario.logged = true;
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        localStorage.setItem('logged', true);
         window.location.href = '../../index.html';
     } else {
         alert('Email ou senha incorretos!');
