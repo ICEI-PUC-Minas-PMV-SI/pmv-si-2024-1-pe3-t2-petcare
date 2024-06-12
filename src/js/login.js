@@ -106,6 +106,11 @@ function cadastrar() {
     const senha = document.getElementById('cadSenha').value;
     const confirmSenha = document.getElementById('confirmSenha').value;
 
+    if (!nome || !email || !senha || !confirmSenha) {
+        alert('Preencha todos os dados!');
+        return;
+    }
+
     if (senha !== confirmSenha) {
         alert('As senhas não coincidem!');
         return;
