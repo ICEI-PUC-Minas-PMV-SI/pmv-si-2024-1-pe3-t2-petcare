@@ -15,6 +15,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="../css/global-styles/menu_style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/padding/padding.css">
     <link href="../css/adocao.css" rel="stylesheet">
     <title>Adoção | PetCare</title>
 </head>
@@ -86,68 +88,73 @@
                     </div>
                 </div>
 
-                <main>
-                    <section class="d-flex flex-column justify-content-center align-items-center gap-3">
-                        <h3 class="pt-5">Informe o tipo de Pet que deseja adotar e o estado/cidade em que reside.</h3>
-                        <br>
-                        <form id="form_adocao" action="../html/agradecimentos.html">
-                            <label for="form-check-label pet">Pet:</label><br>
-                            <label class="form-check-label pet-label">
-                                <input class="form-check-input" type="radio" id="cachorro" name="pet" value="cachorro">
-                                <img class="pet-option" src="../../imagens/adocao/cachorro-1.jpg" alt="Cachorro"> Cachorro
-                            </label>
-                            <label class="form-check-label pet-label">
-                                <input class="form-check-input" type="radio" id="gato" name="pet" value="gato">
-                                <img class="pet-option" src="../../imagens/adocao/gato-1.jpg" alt="Gato"> Gato
-                            </label>
-                            <label class="form-check-label pet-label">
-                                <input class="form-check-input" type="radio" id="passaro" name="pet" value="passaro">
-                                <img class="pet-option" src="../../imagens/adocao/passaro-1.jpg" alt="Pássaro"> Pássaro
-                            </label>
-                            <br><br>
+                <div class="inicio">
+                    <h1>Página de Adoção</h1>
+                    <h2>Informe o tipo de Pet que deseja adotar e o estado/cidade em que reside.</h2>
+                </div>
 
-                            <label for="estado">Estado:</label>
-                            <select class="form-select" id="estado" name="estado" onchange="atualizarCidades()">
-                                <option value="AC">Acre</option>
-                                        <option value="AL">Alagoas</option>
-                                        <option value="AP">Amapá</option>
-                                        <option value="AM">Amazonas</option>
-                                        <option value="BA">Bahia</option>
-                                        <option value="CE">Ceará</option>
-                                        <option value="DF">Distrito Federal</option>
-                                        <option value="ES">Espírito Santo</option>
-                                        <option value="GO">Goiás</option>
-                                        <option value="MA">Maranhão</option>
-                                        <option value="MT">Mato Grosso</option>
-                                        <option value="MS">Mato Grosso do Sul</option>
-                                        <option value="MG">Minas Gerais</option>
-                                        <option value="PA">Pará</option>
-                                        <option value="PB">Paraíba</option>
-                                        <option value="PR">Paraná</option>
-                                        <option value="PE">Pernambuco</option>
-                                        <option value="PI">Piauí</option>
-                                        <option value="RJ">Rio de Janeiro</option>
-                                        <option value="RN">Rio Grande do Norte</option>
-                                        <option value="RS">Rio Grande do Sul</option>
-                                        <option value="RO">Rondônia</option>
-                                        <option value="RR">Roraima</option>
-                                        <option value="SC">Santa Catarina</option>
-                                        <option value="SP">São Paulo</option>
-                                        <option value="SE">Sergipe</option>
-                                        <option value="TO">Tocantins</option>
-                            </select>
-                            <br>
-
-                            <label for="cidade">Cidade:</label>
-                            <select class="form-select" id="cidade" name="cidade">
-                                <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
-                            </select>
-                            <br>
-
-                            <button class="btn btn-primary" type="submit">Enviar</button>
-                        </form>
-                    </section>
-                </main>
+                <div class="container-adocao">
+                    <div class="cards">
+                        <div class="conteudo">
+                            <form id="form_adocao" action="../html/agradecimentos.html">
+                                <label for="form-check-label pet">Pet:</label><br>
+                                <label class="form-check-label pet-label">
+                                    <input class="form-check-input" type="radio" id="cachorro" name="pet" value="cachorro">
+                                    <img class="pet-option" src="../../imagens/adocao/cachorro-1.jpg" alt="Cachorro"> Cachorro
+                                </label>
+                                <label class="form-check-label pet-label">
+                                    <input class="form-check-input" type="radio" id="gato" name="pet" value="gato">
+                                    <img class="pet-option" src="../../imagens/adocao/gato-1.jpg" alt="Gato"> Gato
+                                </label>
+                                <label class="form-check-label pet-label">
+                                    <input class="form-check-input" type="radio" id="passaro" name="pet" value="passaro">
+                                    <img class="pet-option" src="../../imagens/adocao/passaro-1.jpg" alt="Pássaro"> Pássaro
+                                </label>
+                                <br><br>
+        
+                                <label for="estado">Estado:</label>
+                                <select class="form-select" id="estado" name="estado" onchange="atualizarCidades()">
+                                    <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                </select>
+                                <br>
+        
+                                <label for="cidade">Cidade:</label>
+                                <select class="form-select" id="cidade" name="cidade">
+                                    <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
+                                </select>
+                                <br>
+        
+                                <button class="btn btn-primary" type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
                 
                 <!-- Footer PetCare -->
@@ -217,32 +224,32 @@
                     </div>
                 </footer>
 
+                <!-- Menu Mobile -->
+                <div class="bottom-menu d-md-none">
+                    <a href="./products.html" class="bottom-menu-item" data-title="Produtos">
+                        <i class="material-icons">storefront</i>
+                    </a>
+                    <a href="./atendimento.html" class="bottom-menu-item" data-title="Serviços">
+                        <i class="material-icons">pets</i>
+                    </a>
+                    <a href="#" id="sidebar-mob-item-logged" class="bottom-menu-item icon-logged-user active"
+                        data-title="Adoção">
+                        <i class="material-icons">favorite</i>
+                    </a>
+                    <a href="./dicas.html" class="bottom-menu-item" data-title="Dicas">
+                        <i class="material-icons">flag</i>
+                    </a>
+                    <a href="./suporte.html" class="bottom-menu-item" data-title="Fale Conosco">
+                        <i class="material-icons">help</i>
+                    </a>
+                    <a href="./login.html" id="logout-mobile" class="bottom-menu-item" data-title="Entrar">
+                        <i id="mobile-login-icon" class="material-icons">login</i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Menu Mobile -->
-    <div class="bottom-menu d-md-none">
-        <a href="./products.html" class="bottom-menu-item" data-title="Produtos">
-            <i class="material-icons">storefront</i>
-        </a>
-        <a href="./atendimento.html" class="bottom-menu-item" data-title="Serviços">
-            <i class="material-icons">pets</i>
-        </a>
-        <a href="#" id="sidebar-mob-item-logged" class="bottom-menu-item icon-logged-user active"
-            data-title="Adoção">
-            <i class="material-icons">favorite</i>
-        </a>
-        <a href="./dicas.html" class="bottom-menu-item" data-title="Dicas">
-            <i class="material-icons">flag</i>
-        </a>
-        <a href="./suporte.html" class="bottom-menu-item" data-title="Fale Conosco">
-            <i class="material-icons">help</i>
-        </a>
-        <a href="./login.html" id="logout-mobile" class="bottom-menu-item" data-title="Entrar">
-            <i id="mobile-login-icon" class="material-icons">login</i>
-        </a>
-    </div>
 
     <script src="../js/interceptor.js"></script>
     <script>
