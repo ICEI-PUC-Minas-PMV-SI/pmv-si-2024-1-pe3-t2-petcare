@@ -95,6 +95,10 @@
                     </h2>
                 </div>
 
+                <div class="container-adocao">
+                    
+                </div>
+
                 <!-- Footer PetCare -->
                 <footer class="footer">
                     <div class="bg-light py-5 py-xl-8 py-xxl-9 border-top border-light">
@@ -196,6 +200,50 @@
         if (!usuarioLogado){
             window.location.href = './login.html';
         } 
+    </script>
+
+    <script>
+        function listarAdocoes() {
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+            const usuarioLogado = usuarios.find(user => user.logged === true);
+
+            if (!usuarioLogado) {
+                alert('Você precisa estar logado para ver suas adoções.');
+                window.location.href = './login.html';
+                return;
+            }
+
+            const containerAdocao = document.querySelector('.container-adocao');
+            const divInicio = document.querySelector('.inicio');
+
+            if (usuarioLogado.adocoes && usuarioLogado.adocoes.length > 0) {
+                const cardsDiv = document.createElement('div');
+                cardsDiv.className = 'cards';
+                const saudacao = document.createElement('p');
+                saudacao.id = 'saudacao';
+                saudacao.textContent = `${usuarioLogado.nome}, estas são as adoções que você já submeteu:`;
+                divInicio.appendChild(saudacao);
+                containerAdocao.appendChild(cardsDiv);
+
+                usuarioLogado.adocoes.forEach(adocao => {
+                    const conteudoDiv = document.createElement('div');
+                    conteudoDiv.className = 'conteudo';
+                    conteudoDiv.innerHTML = `
+                        Tipo de pet - ${adocao.tipoPet} <br>
+                        Procurando na cidade de ${adocao.cidade}, no estado ${adocao.estado}
+                    `;
+                    cardsDiv.appendChild(conteudoDiv);
+                });
+            } else {
+                const conteudoDiv = document.createElement('div');
+                conteudoDiv.className = 'conteudo';
+                conteudoDiv.textContent = 'Você ainda não submeteu nenhuma adoção.';
+                containerAdocao.appendChild(conteudoDiv);
+            }
+        }
+
+        // Chama a função para listar as adoções quando a página carregar
+        window.onload = listarAdocoes;
     </script>
 </body>
 

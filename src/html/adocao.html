@@ -93,18 +93,18 @@
                 <div class="container-adocao">
                     <div class="cards">
                         <div class="conteudo">
-                            <form id="form_adocao" action="../html/agradecimentos.html">
+                            <form id="form_adocao" onSubmit="event.preventDefault(); salvarAdocao();">
                                 <label for="form-check-label pet">Pet:</label><br>
                                 <label class="form-check-label pet-label">
-                                    <input class="form-check-input" type="radio" id="cachorro" name="pet" value="cachorro">
+                                    <input class="form-check-input" type="radio" id="cachorro" name="tipoPet" value="Cachorro">
                                     <img class="pet-option" src="../../imagens/adocao/cachorro-1.jpg" alt="Cachorro"> Cachorro
                                 </label>
                                 <label class="form-check-label pet-label">
-                                    <input class="form-check-input" type="radio" id="gato" name="pet" value="gato">
+                                    <input class="form-check-input" type="radio" id="gato" name="tipoPet" value="Gato">
                                     <img class="pet-option" src="../../imagens/adocao/gato-1.jpg" alt="Gato"> Gato
                                 </label>
                                 <label class="form-check-label pet-label">
-                                    <input class="form-check-input" type="radio" id="passaro" name="pet" value="passaro">
+                                    <input class="form-check-input" type="radio" id="passaro" name="tipoPet" value="Pássaro">
                                     <img class="pet-option" src="../../imagens/adocao/passaro-1.jpg" alt="Pássaro"> Pássaro
                                 </label>
                                 <br><br>
@@ -304,6 +304,33 @@
                     cidadeSelect.appendChild(option);
                 });
             }
+        }
+
+        function salvarAdocao() {
+            const tipoPet = document.querySelector('input[name="tipoPet"]:checked').value;
+            const estado = document.getElementById('estado').value;
+            const cidade = document.getElementById('cidade').value;
+
+            const novaAdocao = {
+                tipoPet: tipoPet,
+                estado: estado,
+                cidade: cidade
+            };
+
+            if (!usuarioLogado.adocoes) {
+                usuarioLogado.adocoes = [];
+            }
+
+            usuarioLogado.adocoes.push(novaAdocao);
+
+            // Atualiza o usuário no localStorage
+            const usuariosAtualizados = usuarios.map(user => 
+                user.email === usuarioLogado.email ? usuarioLogado : user
+            );
+            localStorage.setItem('usuarios', JSON.stringify(usuariosAtualizados));
+
+            alert('Adoção submetida com sucesso!');
+            window.location.href = '../html/agradecimentos.html';
         }
 
         // Inicializa as cidades para o estado selecionado por padrão

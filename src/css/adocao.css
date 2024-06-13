@@ -16,6 +16,10 @@ h2 {
     margin-bottom: 1.8em;
 }
 
+#saudacao {
+    text-align: center;
+}
+
 .conteudo {
     background-color: #f5f1f1;
     padding: 40px;
