@@ -16,6 +16,34 @@ h2 {
     margin-bottom: 1.8em;
 }
 
+.botao-adocao {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--petcare-color-dark-orange);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--petcare-color-orange);
+    border-color: var(--petcare-color-orange);
+    color: var(--petcare-color-full-white) !important;
+    transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 #saudacao {
     text-align: center;
 }
