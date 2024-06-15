@@ -129,6 +129,7 @@ label {
 
 @media (max-width: 768px) {
    .container-login {
-      margin-right: 5px;
+      margin: 0 auto;
+      max-width: 100%;
    }
 }
