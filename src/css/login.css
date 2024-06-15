@@ -127,3 +127,8 @@ label {
    font-family: 'Ubuntu Sans', sans-serif;
 }
 
+@media (max-width: 768px) {
+   .container-login {
+      margin-right: 5px;
+   }
+}
