@@ -3,4 +3,4 @@ Documentação do Projeto -
 <br><br>
 Apresentação final Projeto - [Apresentação Final PPT PetCare - eixo 3.pptx](https://github.com/user-attachments/files/16044755/Apresentacao.Final.PPT.PetCare.-.eixo.3.pptx)
 <br><br>
-Link para vizualizar o projeto: https://pet-care2.vercel.app/
+Link para o projeto: https://pet-care2.vercel.app/
